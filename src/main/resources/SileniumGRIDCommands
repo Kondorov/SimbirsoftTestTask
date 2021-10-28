@@ -1,3 +1,4 @@
+//директория с сервером
 cd C:\Users\kondo\IdeaProjects\SimbirsoftTestTask\src\main\resources
 //запуск сервера
 java -jar selenium-server-4.0.0.jar hub

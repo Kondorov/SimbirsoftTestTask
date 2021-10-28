@@ -11,23 +11,19 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
-        this.driver = driver;
+        this.driver=driver;
     }
 
-    //определение локатора кнопки войти
-    @FindBy(xpath = "//*[@id=\"index-page-container\"]/div/div[2]/div/div/div[4]/a[2]")
+    @FindBy(xpath="//*[@id=\"index-page-container\"]/div/div[2]/div/div/div[4]/a[2]")
     private WebElement inBtn;
 
-    // определение локатора поля ввода логина
-    @FindBy(xpath = "//*[contains(@id, 'passp-field-login')]")
+    @FindBy(xpath="//*[contains(@id, 'passp-field-login')]")
     private WebElement loginField;
 
-    //определение локатора кнопки входа в аккаунт
-    @FindBy(xpath = "//*[contains(@id, 'passp:sign-in')]")
+    @FindBy(xpath="//*[contains(@id, 'passp:sign-in')]")
     private WebElement loginBtn;
 
-    //определение локатора поля ввода пароля
-    @FindBy(xpath = "//*[contains(@id, 'passp-field-passwd')]")
+    @FindBy(xpath="//*[contains(@id, 'passp-field-passwd')]")
     private WebElement passwdField;
 
     public void inputLogin(String login) {

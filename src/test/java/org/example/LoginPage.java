@@ -7,13 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-    public WebDriver driver;
+    private WebDriver driver;
 
     public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
+    //определение локатора кнопки войти
+    @FindBy(xpath = "//*[@id=\"index-page-container\"]/div/div[2]/div/div/div[4]/a[2]")
+    private WebElement inBtn;
 
     // определение локатора поля ввода логина
     @FindBy(xpath = "//*[contains(@id, 'passp-field-login')]")
@@ -37,5 +40,9 @@ public class LoginPage {
 
     public void clickLoginBtn() {
         loginBtn.click();
+    }
+
+    public void clickInBtn() {
+        inBtn.click();
     }
 }

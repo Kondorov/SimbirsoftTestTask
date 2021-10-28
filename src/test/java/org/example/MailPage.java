@@ -9,7 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MailPage {
-    public WebDriver driver;
+
+    private WebDriver driver;
 
     public MailPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -17,7 +18,7 @@ public class MailPage {
     }
 
     // определение локатора поля поиска писем
-    @FindBy(xpath = "//*[@id=\"js-apps-container\"]/div[2]/div[8]/div/div[2]/div/div/div[1]/div[2]/div/div/div/div[1]/form/div/span/input")
+    @FindBy(xpath = "//*[contains(@class, 'textinput__control')]")
     private WebElement searchField;
 
     // определение кнопки найти
